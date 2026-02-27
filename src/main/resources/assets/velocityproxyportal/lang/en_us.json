@@ -1,0 +1,13 @@
+{
+  "itemGroup.velocityproxyportal": "Example Mod Tab",
+  "block.velocityproxyportal.example_block": "Example Block",
+  "item.velocityproxyportal.example_item": "Example Item",
+
+  "velocityproxyportal.configuration.title": "VelocityProxyPortal Configs",
+  "velocityproxyportal.configuration.section.velocityproxyportal.common.toml": "VelocityProxyPortal Configs",
+  "velocityproxyportal.configuration.section.velocityproxyportal.common.toml.title": "VelocityProxyPortal Configs",
+  "velocityproxyportal.configuration.items": "Item List",
+  "velocityproxyportal.configuration.logDirtBlock": "Log Dirt Block",
+  "velocityproxyportal.configuration.magicNumberIntroduction": "Magic Number Text",
+  "velocityproxyportal.configuration.magicNumber": "Magic Number"
+}

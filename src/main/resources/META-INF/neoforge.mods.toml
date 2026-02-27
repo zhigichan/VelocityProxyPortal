@@ -1,0 +1,27 @@
+# Обязательные системные поля для NeoForge 1.21.1
+modLoader="javafml"
+loaderVersion="[4,)" # Номер лоадера для 1.21.1
+license="MIT"
+
+[[mods]]
+modId="vpp"
+version="1.0.0"
+displayName="Velocity Proxy Portal"
+authors="zhigichan_31"
+description='''
+Серверный мод для телепортации игроков через Velocity с помощью сущностей с тегами.
+'''
+
+[[dependencies.vpp]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="SERVER"
+
+[[dependencies.vpp]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1, 1.22)"
+ordering="NONE"
+side="SERVER"
