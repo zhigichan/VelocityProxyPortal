@@ -137,11 +137,41 @@ public class VelocityProxyPortal {
     private static void executeTeleport(ServerPlayer p, PortalConfig.PortalSettings s) {
         lastTeleportTime.put(p.getUUID(), System.currentTimeMillis());
         teleportTimer.remove(p.getUUID());
-        if ("look".equals(s.trigger().offset())) {
-            Vec3 look = p.getLookAngle().normalize();
-            p.teleportTo(p.getX() - look.x * 2.0, p.getY(), p.getZ() - look.z * 2.0);
+
+        String offset = s.trigger().offset();
+
+        // Ищем портал, чтобы взять его координаты за основу
+        Entity portal = p.level().getEntities((Entity) null, p.getBoundingBox().inflate(8.0),
+                        e -> e.getTags().stream().anyMatch(tag -> CONFIG.portals.containsKey(tag)))
+                .stream().findFirst().orElse(null);
+
+        if (offset != null && offset.contains(",") && portal != null) {
+            String[] parts = offset.split(",");
+            if (parts.length == 3) {
+                double tx = parseRelativeCoord(parts[0].trim(), portal.getX());
+                double ty = parseRelativeCoord(parts[1].trim(), portal.getY());
+                double tz = parseRelativeCoord(parts[2].trim(), portal.getZ());
+                p.teleportTo(tx, ty, tz);
+            }
         }
+
         PacketDistributor.sendToPlayer(p, new BungeePayload("Connect", s.server()));
+    }
+
+    private static double parseRelativeCoord(String input, double base) {
+        if (input.startsWith("~")) {
+            if (input.length() == 1) return base;
+            try {
+                return base + Double.parseDouble(input.substring(1));
+            } catch (NumberFormatException e) {
+                return base;
+            }
+        }
+        try {
+            return Double.parseDouble(input);
+        } catch (NumberFormatException e) {
+            return base;
+        }
     }
 
     private static void spawnPart(ServerPlayer p, String name, double x, double y, double z) {
