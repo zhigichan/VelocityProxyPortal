@@ -54,7 +54,7 @@ public class PortalConfig {
         PortalConfig config = new PortalConfig();
         config.portals.put("lobby_portal", new PortalSettings(
                 "lobby", 100,
-                new TriggerSettings(4.0, "look"),
+                new TriggerSettings(4.0, "~5, ~, ~5"),
                 new VisualSettings("minecraft:portal", 1.2, 0.1),
                 List.of(
                         "1/block.beehive.enter-1.0-1.0-player",
