@@ -5,7 +5,7 @@ license="MIT"
 
 [[mods]]
 modId="vpp"
-version="1.0.0"
+version="1.2.4"
 displayName="Velocity Proxy Portal"
 authors="zhigichan_31"
 description='''
