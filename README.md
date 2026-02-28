@@ -11,6 +11,7 @@
 Когда вы запускаете мой серверный мод то создаёт в config файл "vpp-portals"<br>
 При открытие файла "vpp-portals" вы можете заметить такую картину<br>
 
+```json
 {
   "portals": {
     "lobby": {
@@ -32,6 +33,7 @@
     }
   }
 }
+```
 
 Portal - это все ваши теги привязки со своими настройками<br>
 lobby - это ваш тег<br>
@@ -67,50 +69,52 @@ entity.enderman.teleport - это звук из майна (сюда может�
 - world это от тебя во весь мир<br>
 - player это у тебя в голове<br>
 
-Вот вам пример melody<br>
-"1/block.note_block.bass-0.5-0.8-world",<br>
-"1/block.note_block.snare-0.5-0.6-world",<br>
-"1/block.note_block.harp-1.0-0.7-world",<br>
-"5/block.note_block.harp-1.12-0.7-world",<br>
-"9/block.note_block.bass-0.5-0.8-world",<br>
-"9/block.note_block.snare-0.5-0.6-world",<br>
-"9/block.note_block.harp-1.19-0.8-world",<br>
-"13/block.note_block.harp-1.26-0.8-world",<br>
-"17/block.note_block.bass-0.63-0.8-world",<br>
-"17/block.note_block.snare-0.5-0.6-world",<br>
-"17/block.note_block.harp-1.34-0.9-world",<br>
-"21/block.note_block.harp-1.5-0.9-world",<br>
-"25/block.note_block.bass-0.5-0.8-world",<br>
-"25/block.note_block.snare-0.5-0.6-world",<br>
-"25/block.note_block.harp-1.0-0.7-world",<br>
-"29/block.note_block.harp-1.12-0.7-world",<br>
-"33/block.note_block.bass-0.5-0.8-world",<br>
-"33/block.note_block.snare-0.5-0.6-world",<br>
-"33/block.note_block.harp-1.19-0.8-world",<br>
-"37/block.note_block.harp-1.26-0.8-world",<br>
-"41/block.note_block.bass-0.63-0.8-world",<br>
-"41/block.note_block.snare-0.5-0.6-world",<br>
-"41/block.note_block.harp-1.34-0.9-world",<br>
-"45/block.note_block.harp-1.5-0.9-world",<br>
-"49/block.note_block.bass-0.5-0.8-world",<br>
-"49/block.note_block.snare-0.5-0.6-world",<br>
-"49/block.note_block.harp-1.0-0.7-world",<br>
-"53/block.note_block.harp-1.12-0.7-world",<br>
-"57/block.note_block.bass-0.5-0.8-world",<br>
-"57/block.note_block.snare-0.5-0.6-world",<br>
-"57/block.note_block.harp-1.19-0.8-world",<br>
-"61/block.note_block.harp-1.26-0.8-world",<br>
-"65/block.note_block.bass-0.63-0.8-world",<br>
-"65/block.note_block.snare-0.5-0.6-world",<br>
-"65/block.note_block.harp-1.34-0.9-world",<br>
-"69/block.note_block.harp-1.5-0.9-world",<br>
-"73/block.note_block.bass-0.71-0.9-world",<br>
-"73/block.note_block.snare-0.5-0.6-world",<br>
-"73/block.note_block.harp-1.5-1.0-world",<br>
-"77/block.note_block.harp-1.5-0.9-world",<br>
-"81/block.note_block.bass-0.5-0.8-world",<br>
-"81/block.note_block.snare-0.5-0.6-world",<br>
-"81/block.note_block.harp-1.0-0.7-world"<br>
+Вот вам пример melody
+```json
+"1/block.note_block.bass-0.5-0.8-world",
+"1/block.note_block.snare-0.5-0.6-world",
+"1/block.note_block.harp-1.0-0.7-world",
+"5/block.note_block.harp-1.12-0.7-world",
+"9/block.note_block.bass-0.5-0.8-world",
+"9/block.note_block.snare-0.5-0.6-world",
+"9/block.note_block.harp-1.19-0.8-world",
+"13/block.note_block.harp-1.26-0.8-world",
+"17/block.note_block.bass-0.63-0.8-world",
+"17/block.note_block.snare-0.5-0.6-world",
+"17/block.note_block.harp-1.34-0.9-world",
+"21/block.note_block.harp-1.5-0.9-world",
+"25/block.note_block.bass-0.5-0.8-world",
+"25/block.note_block.snare-0.5-0.6-world",
+"25/block.note_block.harp-1.0-0.7-world",
+"29/block.note_block.harp-1.12-0.7-world",
+"33/block.note_block.bass-0.5-0.8-world",
+"33/block.note_block.snare-0.5-0.6-world",
+"33/block.note_block.harp-1.19-0.8-world",
+"37/block.note_block.harp-1.26-0.8-world",
+"41/block.note_block.bass-0.63-0.8-world",
+"41/block.note_block.snare-0.5-0.6-world",
+"41/block.note_block.harp-1.34-0.9-world",
+"45/block.note_block.harp-1.5-0.9-world",
+"49/block.note_block.bass-0.5-0.8-world",
+"49/block.note_block.snare-0.5-0.6-world",
+"49/block.note_block.harp-1.0-0.7-world",
+"53/block.note_block.harp-1.12-0.7-world",
+"57/block.note_block.bass-0.5-0.8-world",
+"57/block.note_block.snare-0.5-0.6-world",
+"57/block.note_block.harp-1.19-0.8-world",
+"61/block.note_block.harp-1.26-0.8-world",
+"65/block.note_block.bass-0.63-0.8-world",
+"65/block.note_block.snare-0.5-0.6-world",
+"65/block.note_block.harp-1.34-0.9-world",
+"69/block.note_block.harp-1.5-0.9-world",
+"73/block.note_block.bass-0.71-0.9-world",
+"73/block.note_block.snare-0.5-0.6-world",
+"73/block.note_block.harp-1.5-1.0-world",
+"77/block.note_block.harp-1.5-0.9-world",
+"81/block.note_block.bass-0.5-0.8-world",
+"81/block.note_block.snare-0.5-0.6-world",
+"81/block.note_block.harp-1.0-0.7-world"
+```
 
 Если что вы можете текста размещять так<br>
 "81/block.note_block.snare-0.5-0.6-world", "81/block.note_block.snare-0.5-0.6-world", "81/block.note_block.harp-1.0-0.7-world",<br>
@@ -122,6 +126,7 @@ entity.enderman.teleport - это звук из майна (сюда может�
 
 И напоследок могу сказать что в конфиг можно запихать и второй тег и будет выглядить вот так<br>
 
+```json
 {
   "portals": {
     "lobby": {
@@ -159,7 +164,4 @@ entity.enderman.teleport - это звук из майна (сюда может�
       ]
   }
 }
-
-
-
-
+```
